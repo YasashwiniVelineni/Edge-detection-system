@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-image = cv2.imread('input.jpg', 0)
+image = cv2.imread('/workspaces/Edge-detection-system/input.jpg', 0)
 
 # Sobel Edge Detection
 
@@ -47,3 +47,8 @@ for i in range(5):
     plt.yticks([])
 
 plt.show()
+
+cv2.imwrite('/workspaces/Edge-detection-system/sobel_output.jpg', sobel)
+cv2.imwrite('/workspaces/Edge-detection-system/prewitt_output.jpg', prewitt)
+cv2.imwrite('/workspaces/Edge-detection-system/laplacian_output.jpg', laplacian)
+cv2.imwrite('/workspaces/Edge-detection-system/canny_output.jpg', canny)
